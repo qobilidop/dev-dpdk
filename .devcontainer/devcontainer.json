@@ -1,0 +1,24 @@
+// https://containers.dev/implementors/json_reference/
+{
+    "name": "p4buf",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "privileged": true,
+    "mounts": [
+        {
+            "source": "/dev/hugepages",
+            "target": "/dev/hugepages",
+            "type": "bind"
+        }
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "editorconfig.editorconfig",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}
